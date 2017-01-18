@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby CLI Gem Project: RA Events"
-date:   2017-01-18 19:11:03 +0000
+date:   2017-01-18 14:11:03 -0500
 ---
 
 Originally, I decided that I wanted to create a gem that scraped darksky.net for the weather at whatever location you specified around the world. I had finished that when I realized it didn't meet the basic requirement of this assignment, which was to have the scraper create many objects, not just one. I promise to read more carefully next time. 
