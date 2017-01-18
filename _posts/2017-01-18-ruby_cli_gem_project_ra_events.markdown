@@ -20,22 +20,21 @@ I created a class hash for these url parameters in the scraper class.
 
 There are two things needed in order for the scraper to create the URL to pass to Nokogiri so that the appropriate page can be retrieved: The city parameter above and the date.
 
-![](http://http://i.imgur.com/szppoth.jpg)
+![](http://i.imgur.com/szppoth.jpg)
 
 After asking the user for one of the top ten cities in the world for RA events, the gem lists two weeks’ worth of dates starting from today. When the user chooses one of the dates, the date gets split into year, month, and day and sent alone with the city parameter to the Scraper class. From there, the Scraper creates the URL and scrapes the selected day in the selected city.
 
-![](http://http://imgur.com/9oGpd56)
+![](http://i.imgur.com/9oGpd56.jpg)
 
 The Scraper class, in turn, creates the Event objects from each event on the event listing pages for that day in the given city. Finding the xpath selectors for each piece of information was straightforward, I used the Chrome extension [Xpath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl?hl=en) and inspect to track down the correct ones.
 The price method needed the most work since the information scraped from the price area on each event needed a fair amount of parsing. I found some code on Stack Exchange for a method that performs multiple gsubs on the same string.
 The CLI, after the scraper has completed creating the Event objects, lists the events for the given day and city.
 
-![](http://http://imgur.com/UU4NBi7)
+![](http://i.imgur.com/UU4NBi7.jpg)
 
 Selecting the number of the event displays the event detail.
 
-![](http://http://imgur.com/l6OkQMC)
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/HfUb8"><a href="//imgur.com/HfUb8"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![](http://i.imgur.com/l6OkQMC.jpg)
 
 Then, you can return to the list, select a new date, return to the start to select a new city, or exit.
 The thing that took the longest on this project was the CLI. It’s fairly complicated and I’m sure could be simplified for readability.
