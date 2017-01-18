@@ -38,3 +38,7 @@ Selecting the number of the event displays the event detail.
 
 Then, you can return to the list, select a new date, return to the start to select a new city, or exit.
 The thing that took the longest on this project was the CLI. It’s fairly complicated and I’m sure could be simplified for readability.
+
+The walkthrough can be viewed here:
+
+<iframe src="https://drive.google.com/file/d/0BzEmIJ6cPtG1YzZSekcyeFBCUTg/preview" width="640" height="480"></iframe>
