@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sinatra Portfolio Project: School Registration"
-date:   2017-06-28 20:03:22 +0000
+date:   2017-06-28 16:03:23 -0400
 ---
 
 Since I work at a training institute, the instructor, course, and student models are famliar to me. I decided to create a school registration app with user logins for the students. 
