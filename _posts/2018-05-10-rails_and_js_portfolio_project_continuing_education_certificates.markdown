@@ -118,13 +118,12 @@ Evaluation.prototype.renderEval = function() {
    `}
 ```
 
-Success!
-
 ![Solution to object Object JSON issue in Rails](https://i.imgur.com/z8hPjQS.jpg)
+Success!
 ## New Resource
+To add ability to add new questions dynamically using the Rails form helpers, I used the [cocoon gem](https://github.com/nathanvda/cocoon). 
 
-cocoon gem
-
+Once that was in my gem file, I only needed to add this to my form:
 ```
   <div id="question-forms" class="field mx-5 mt-2">
     <div class='links'>
@@ -132,6 +131,8 @@ cocoon gem
     </div>
   </div>
 ```
+
+And then I added this template and named it `_question_feilds.html.erb` and added it to my views folder. 
 
 ```
 <div class='nested-fields'>
@@ -147,6 +148,9 @@ cocoon gem
 </div>
 ```
 
+Which produced the behavior I wanted exactly.
+
+Then, for the JS, when the creation of the form was successful, it was appending the new form to the DOM without a page refresh and calling the evaluations tempate for the show page, but the URL was still the new route and not the show route, which meant that the Previous and Next buttons were broken. The Learn instructor Cernan advised me to use `history.pushState()` to change the URL to be that of the show page for that new evaluation, thereby fixing the Next and Previous buttons. The code is below.
 
 ```
   $(function () {
