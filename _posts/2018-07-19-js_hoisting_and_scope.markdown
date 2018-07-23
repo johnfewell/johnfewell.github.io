@@ -76,6 +76,7 @@ This is an example of a synchronous callback.
 
 ## Named vs Anonymous Functions
 
+### Anonymous functions
 Anonymous functions are functions without a name identifier, for example:
 
 ```
@@ -86,5 +87,8 @@ const thisFunctionHasNoName = function() {
 
 They are not pre-compiled, but rather are only compiled when called. 
 
-Named functions 
+### Named functions 
+
+The first benefit to naming functions is that it can make debugging easier.  In a nasty debugging situation, it can help track down the source of an error rather than seeing a number of `anonymous` funcitons in the call stack.
+If you need to call the function from inside the function itself, as is the case with recursive functions, then the function needs to be named. 
 
